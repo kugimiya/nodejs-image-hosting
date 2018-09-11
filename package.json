@@ -1,0 +1,18 @@
+{
+  "name": "image-hosting",
+  "version": "1.0.0",
+  "description": "ImageHosting for U-Me Group projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ridouchire@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "express-fileupload": "*",
+    "file-type": "*",
+    "jade": "*"
+  }
+}
