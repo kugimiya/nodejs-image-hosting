@@ -13,7 +13,7 @@ app.set('templates', path.join(__dirname, 'templates'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(fileUpload(
-    limits: { fileSize: 20 * 20 * 1024 },
+    { limits: { fileSize: 20 * 20 * 1024 } },
 ));
 app.use(express.static(path.join(__dirname, 'public')));
 
