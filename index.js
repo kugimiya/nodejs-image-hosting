@@ -6,7 +6,7 @@ const path       = require('path');
 
 const app              = express();
 const port             = 8000;
-const supportMimeTypes = ['jpg', 'jpeg', 'png', 'gif'];
+const supportMimeTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
 
 app.set('templates', path.join(__dirname, 'templates'));
 
@@ -23,8 +23,8 @@ app.post('/upload', function(req, res) {
 	return res.status(400).send('No file were uploaded.');
 
     let file = req.files.file;
-    let type = fileType(req.files.file.data);
-
+    let type = file.mimetype;
+console.log(supportMimeTypes, type);
     if (supportMimeTypes.indexOf(type) === -1)
 	return res.status(400).send('Unsupported file type.');
 
